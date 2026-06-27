@@ -8,6 +8,7 @@ import { modelManager } from './services/ModelManager.js';
 import { streamManager } from './services/StreamManager.js';
 import { proxyPool } from './ProxyPool.js';
 import { proxyServer } from './ProxyServer.js';
+import { startProxyBridge } from './proxyBridge.js';
 import { requestLogger, errorHandler, requestLimits } from './middleware/auth.js';
 import apiRouter from './routes/api.js';
 
@@ -64,6 +65,23 @@ class Application {
       throw new Error(`配置错误:\n${configErrors.join('\n')}`);
     }
     
+    // 代理桥：若设置了 AUTH_PROXY_URL，先启动本地桥（注入上游认证），
+    // 供不支持认证的 chrome_proxy_server 使用
+    if (process.env.AUTH_PROXY_URL) {
+      const bridgePort = parseInt(process.env.PROXY_BRIDGE_PORT || '7861', 10);
+      const bridgeHost = process.env.PROXY_BRIDGE_HOST || '127.0.0.1';
+      try {
+        await startProxyBridge();
+        if (!config.proxy.url) {
+          config.proxy.url = `http://${bridgeHost}:${bridgePort}`;
+          logger.info(`已自动将 PROXY_URL 指向代理桥: ${config.proxy.url}`);
+        }
+        logger.success('代理桥启动成功');
+      } catch (error) {
+        logger.error(`启动代理桥失败: ${error.message}`);
+      }
+    }
+
     // 初始化代理服务器
     if (config.proxy.enableServer) {
       try {
