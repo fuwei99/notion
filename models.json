@@ -1,0 +1,401 @@
+{
+    "restrictedAccessModelsInPickerConfig": [
+        {
+            "codename": "acai-budino",
+            "modelMessage": "Fable 5",
+            "modelFamily": "anthropic",
+            "disabledReason": "business_or_enterprise_plan_required"
+        }
+    ],
+    "models": [
+        {
+            "model": "oatmeal-cookie",
+            "modelMessage": "GPT-5.2",
+            "modelFamily": "openai",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 4,
+                "intelligence": 4,
+                "cost": 3
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "oatmeal-cookie",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "oatmeal-cookie",
+                "beta": true
+            }
+        },
+        {
+            "model": "oval-kumquat-medium",
+            "modelMessage": "GPT-5.4",
+            "modelFamily": "openai",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 4,
+                "intelligence": 5,
+                "cost": 4
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "oval-kumquat-medium",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "oval-kumquat-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "opal-quince-medium",
+            "modelMessage": "GPT-5.5",
+            "modelFamily": "openai",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "isApproachingRateLimit": false,
+            "modelCardAttributes": {
+                "speed": 4,
+                "intelligence": 5,
+                "cost": 5
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "opal-quince-medium",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "opal-quince-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "vertex-gemini-2.5-flash",
+            "modelMessage": "Gemini 2.5 Flash",
+            "modelFamily": "gemini",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "markdownChat": {
+                "beta": false
+            }
+        },
+        {
+            "model": "vertex-gemini-3.5-flash",
+            "modelMessage": "Gemini 3.5 Flash",
+            "modelFamily": "gemini",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 3,
+                "cost": 3
+            },
+            "customAgent": {
+                "finalModelName": "vertex-gemini-3.5-flash",
+                "beta": true
+            }
+        },
+        {
+            "model": "almond-croissant-low",
+            "modelMessage": "Sonnet 4.6",
+            "modelFamily": "anthropic",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 3,
+                "intelligence": 5,
+                "cost": 4
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "almond-croissant-low",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "almond-croissant-low",
+                "beta": true
+            }
+        },
+        {
+            "model": "avocado-froyo-medium",
+            "modelMessage": "Opus 4.6",
+            "modelFamily": "anthropic",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "isApproachingRateLimit": false,
+            "modelCardAttributes": {
+                "speed": 2,
+                "intelligence": 5,
+                "cost": 5
+            },
+            "customAgent": {
+                "finalModelName": "avocado-froyo-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "apricot-sorbet-high",
+            "modelMessage": "Opus 4.7",
+            "modelFamily": "anthropic",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "isApproachingRateLimit": false,
+            "modelCardAttributes": {
+                "speed": 2,
+                "intelligence": 5,
+                "cost": 5
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "apricot-sorbet-high",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "apricot-sorbet-high",
+                "beta": true
+            }
+        },
+        {
+            "model": "ambrosia-tart-high",
+            "modelMessage": "Opus 4.8",
+            "modelFamily": "anthropic",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "isApproachingRateLimit": false,
+            "modelCardAttributes": {
+                "speed": 2,
+                "intelligence": 5,
+                "cost": 5
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "ambrosia-tart-high",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "ambrosia-tart-high",
+                "beta": true
+            }
+        },
+        {
+            "model": "oregon-grape-medium",
+            "modelMessage": "GPT-5.4 Mini",
+            "modelFamily": "openai",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 2,
+                "cost": 2
+            },
+            "customAgent": {
+                "finalModelName": "oregon-grape-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "otaheite-apple-medium",
+            "modelMessage": "GPT-5.4 Nano",
+            "modelFamily": "openai",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 1,
+                "cost": 1
+            },
+            "customAgent": {
+                "finalModelName": "otaheite-apple-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "fireworks-kimi-k2.6",
+            "modelMessage": "Kimi K2.6",
+            "modelFamily": "mystery",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 4,
+                "cost": 2
+            },
+            "workflow": {
+                "finalModelName": "fireworks-kimi-k2.6",
+                "beta": true
+            }
+        },
+        {
+            "model": "baseten-deepseek-v4-pro",
+            "modelMessage": "DeepSeek V4 Pro",
+            "modelFamily": "mystery",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 3,
+                "intelligence": 5,
+                "cost": 4
+            },
+            "workflow": {
+                "finalModelName": "baseten-deepseek-v4-pro",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "baseten-deepseek-v4-pro",
+                "beta": true
+            }
+        },
+        {
+            "model": "baseten-glm-5.2",
+            "modelMessage": "GLM 5.2",
+            "modelFamily": "mystery",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 3,
+                "intelligence": 5,
+                "cost": 3
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "baseten-glm-5.2",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "baseten-glm-5.2",
+                "beta": true
+            }
+        },
+        {
+            "model": "xigua-mochi-medium",
+            "modelMessage": "Grok 4.3",
+            "modelFamily": "xai",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 3,
+                "intelligence": 5,
+                "cost": 4
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "xigua-mochi-medium",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "xigua-mochi-medium",
+                "beta": true
+            }
+        },
+        {
+            "model": "xinomavro-cake",
+            "modelMessage": "Grok Build 0.1",
+            "modelFamily": "xai",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 3,
+                "intelligence": 5,
+                "cost": 4
+            },
+            "workflow": {
+                "finalModelName": "xinomavro-cake",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "xinomavro-cake",
+                "beta": true
+            }
+        },
+        {
+            "model": "galette-medium-thinking",
+            "modelMessage": "Gemini 3.1 Pro",
+            "modelFamily": "gemini",
+            "displayGroup": "intelligent",
+            "isDisabled": false,
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "galette-medium-thinking",
+                "beta": true
+            }
+        },
+        {
+            "model": "anthropic-haiku-4.5",
+            "modelMessage": "Haiku 4.5",
+            "modelFamily": "anthropic",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 2,
+                "cost": 2
+            },
+            "customAgent": {
+                "finalModelName": "anthropic-haiku-4.5",
+                "beta": true
+            }
+        },
+        {
+            "model": "gingerbread",
+            "modelMessage": "Gemini 3 Flash",
+            "modelFamily": "gemini",
+            "displayGroup": "fast",
+            "isDisabled": false,
+            "modelCardAttributes": {
+                "speed": 5,
+                "intelligence": 2,
+                "cost": 2
+            },
+            "customAgent": {
+                "finalModelName": "gingerbread",
+                "beta": true
+            }
+        },
+        {
+            "model": "acai-budino-high",
+            "modelMessage": "Fable 5",
+            "modelFamily": "anthropic",
+            "displayGroup": "intelligent",
+            "isDisabled": true,
+            "disabledReason": "business_or_enterprise_plan_required",
+            "restrictedAccessModelCodename": "acai-budino",
+            "modelCardAttributes": {
+                "speed": 2,
+                "intelligence": 5,
+                "cost": 5
+            },
+            "markdownChat": {
+                "beta": true
+            },
+            "workflow": {
+                "finalModelName": "acai-budino-high",
+                "beta": true
+            },
+            "customAgent": {
+                "finalModelName": "acai-budino-high",
+                "beta": true
+            }
+        }
+    ]
+}
