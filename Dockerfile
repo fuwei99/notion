@@ -19,9 +19,14 @@ COPY src ./src
 COPY public ./public
 COPY docs ./docs
 COPY models.json ./
+COPY start.sh ./
+
+# 修复 Windows 检出导致的 CRLF 行尾，并赋予执行权限
+RUN sed -i 's/\r$//' start.sh && chmod +x start.sh
 
 # 确保 chrome_proxy_server 可执行
-RUN chmod +x src/proxy/chrome_proxy_server_linux_amd64
+RUN sed -i 's/\r$//' src/proxy/chrome_proxy_server_linux_amd64 2>/dev/null || true \
+    && chmod +x src/proxy/chrome_proxy_server_linux_amd64
 
 # 运行时数据目录（cookie、日志等）
 RUN mkdir -p /app/data
