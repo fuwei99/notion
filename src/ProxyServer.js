@@ -116,13 +116,15 @@ class ProxyServer {
         detached: false
       });
 
-      // 将进程的输出重定向到日志文件
+      // 将进程的输出同时写入日志文件和主进程控制台（便于容器平台排查）
       if (this.proxyProcess.stdout) {
         this.proxyProcess.stdout.pipe(this.logStream);
+        this.proxyProcess.stdout.pipe(process.stdout);
       }
       
       if (this.proxyProcess.stderr) {
         this.proxyProcess.stderr.pipe(this.logStream);
+        this.proxyProcess.stderr.pipe(process.stderr);
       }
 
       // 设置进程事件处理
@@ -136,7 +138,14 @@ class ProxyServer {
       });
 
       this.proxyProcess.on('exit', (code, signal) => {
-        logger.info(`代理服务器已退出，退出码: ${code}, 信号: ${signal}`);
+        logger.error(`代理服务器已退出，退出码: ${code}, 信号: ${signal}`);
+        // 打印日志尾部，便于容器平台排查崩溃原因
+        try {
+          if (fs.existsSync(this.logPath)) {
+            const tail = fs.readFileSync(this.logPath, 'utf8').split('\n').slice(-30).join('\n');
+            console.error(`[ProxyServer] 日志尾部:\n${tail}`);
+          }
+        } catch (e) {}
         this.proxyProcess = null;
         if (this.logStream) {
           this.logStream.end();
